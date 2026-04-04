@@ -2,7 +2,10 @@
   "name": "code-quality",
   "version": "1.0.0",
   "description": "Claude Code plugin for code auditing (security, cost, performance, cleanup), config refinement, and jCodeMunch project indexing.",
-  "author": "SkyWalker2506",
+  "author": {
+    "name": "Musab Kara",
+    "url": "https://github.com/SkyWalker2506"
+  },
   "license": "MIT",
   "category": "development",
   "keywords": [

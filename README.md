@@ -1,6 +1,14 @@
-# ccplugin-code-quality
+# code-quality — Claude Code Plugin
+
+by [Musab Kara](https://linkedin.com/in/musab-kara-85580612a) · [GitHub](https://github.com/SkyWalker2506)
 
 Claude Code plugin that bundles code quality, auditing, and indexing functionality.
+
+## Install
+
+```bash
+claude plugin install code-quality@musabkara-claude-marketplace
+```
 
 ## Features
 
@@ -32,20 +40,6 @@ Index your project with jCodeMunch for symbol-aware code navigation.
 /index force           # Rebuild index from scratch
 ```
 
-## Installation
-
-```bash
-claude plugin add SkyWalker2506/ccplugin-code-quality
-```
-
-Or clone and link locally:
-
-```bash
-git clone https://github.com/SkyWalker2506/ccplugin-code-quality.git
-cd ccplugin-code-quality
-claude plugin link .
-```
-
 ## Structure
 
 ```
@@ -68,3 +62,8 @@ skills/
 ## License
 
 MIT
+
+## Part of
+
+- [claude-config](https://github.com/SkyWalker2506/claude-config) — Multi-Agent OS for Claude Code (110 agents, local-first routing)
+- [Plugin Marketplace](https://github.com/SkyWalker2506/claude-marketplace) — Browse & install all 14 plugins
