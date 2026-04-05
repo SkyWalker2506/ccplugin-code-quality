@@ -2,7 +2,7 @@
 
 by [Musab Kara](https://linkedin.com/in/musab-kara-85580612a) · [GitHub](https://github.com/SkyWalker2506)
 
-Claude Code plugin that bundles code quality, auditing, memory maintenance, and indexing functionality.
+Claude Code plugin that bundles code quality, auditing, config refinement, and indexing functionality.
 
 ## Install
 
@@ -32,20 +32,6 @@ Analyze and tighten Claude Code configuration files without changing behavior.
 /refine all            # Refine everything
 ```
 
-### `/memory-prune` — Memory Cleanup
-Scan and clean stale, duplicate, or incorrect memory files. Keeps the memory system accurate over time.
-
-```
-/memory-prune          # Scan and clean (with confirmation)
-/memory-prune --dry-run # Report only, no changes
-```
-
-What it checks:
-- **Stale** — references to files/functions that no longer exist
-- **Duplicate** — same info repeated across multiple memory files
-- **Orphan** — memory files not indexed in MEMORY.md
-- **Outdated projects** — project memories for completed/changed work
-
 ### `/index` — jCodeMunch Indexing
 Index your project with jCodeMunch for symbol-aware code navigation.
 
@@ -62,7 +48,6 @@ Index your project with jCodeMunch for symbol-aware code navigation.
 commands/
   audit.md             # /audit command definition
   refine.md            # /refine command definition
-  memory-prune.md      # /memory-prune command definition
   index.md             # /index command definition
 skills/
   code-quality/
@@ -73,6 +58,10 @@ skills/
 ## MCP Dependencies
 
 - **jcodemunch** — Required for `/index`, enhances `/audit` with symbol-aware scanning. Installed via `uvx jcodemunch-mcp`.
+
+## Roadmap
+
+- `/memory-prune` — Memory Cleanup: scan and clean stale, duplicate, or incorrect memory files (orphan detection, dry-run mode)
 
 ## License
 
