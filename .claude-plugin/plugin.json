@@ -31,6 +31,11 @@
       "name": "index",
       "description": "Index project with jCodeMunch",
       "source": "commands/index.md"
+    },
+    {
+      "name": "memory-prune",
+      "description": "Scan ~/.claude/projects/ memory files — list stale/unused entries, prompt to delete or keep",
+      "source": "commands/memory-prune.md"
     }
   ],
   "skills": [
