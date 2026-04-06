@@ -40,28 +40,9 @@ Index your project with jCodeMunch for symbol-aware code navigation.
 /index force           # Rebuild index from scratch
 ```
 
-## Structure
-
-```
-.claude-plugin/
-  plugin.json          # Plugin manifest
-commands/
-  audit.md             # /audit command definition
-  refine.md            # /refine command definition
-  index.md             # /index command definition
-skills/
-  code-quality/
-    SKILL.md           # Auto-trigger skill for routing
-.mcp.json              # jCodeMunch MCP server config
-```
-
 ## MCP Dependencies
 
 - **jcodemunch** — Required for `/index`, enhances `/audit` with symbol-aware scanning. Installed via `uvx jcodemunch-mcp`.
-
-## Roadmap
-
-- `/memory-prune` — Memory Cleanup: scan and clean stale, duplicate, or incorrect memory files (orphan detection, dry-run mode)
 
 ## License
 
@@ -69,5 +50,6 @@ MIT
 
 ## Part of
 
-- [claude-config](https://github.com/SkyWalker2506/claude-config) — Multi-Agent OS for Claude Code (110 agents, local-first routing)
-- [Plugin Marketplace](https://github.com/SkyWalker2506/claude-marketplace) — Browse & install all 14 plugins
+- [claude-config](https://github.com/SkyWalker2506/claude-config) — Multi-Agent OS for Claude Code (134 agents, local-first routing)
+- [Plugin Marketplace](https://github.com/SkyWalker2506/claude-marketplace) — Browse & install all 18 plugins
+- [ClaudeHQ](https://github.com/SkyWalker2506/ClaudeHQ) — Claude ecosystem HQ
