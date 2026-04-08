@@ -8,46 +8,5 @@
   },
   "license": "MIT",
   "category": "development",
-  "keywords": [
-    "audit",
-    "security",
-    "refine",
-    "index",
-    "jcodemunch",
-    "code-quality"
-  ],
-  "commands": [
-    {
-      "name": "audit",
-      "description": "Security, cost, performance, and cleanup code audit",
-      "source": "commands/audit.md"
-    },
-    {
-      "name": "refine",
-      "description": "Refine CLAUDE.md, SKILL.md, settings, and hooks",
-      "source": "commands/refine.md"
-    },
-    {
-      "name": "index",
-      "description": "Index project with jCodeMunch",
-      "source": "commands/index.md"
-    },
-    {
-      "name": "memory-prune",
-      "description": "Scan ~/.claude/projects/ memory files — list stale/unused entries, prompt to delete or keep",
-      "source": "commands/memory-prune.md"
-    }
-  ],
-  "skills": [
-    {
-      "name": "code-quality",
-      "source": "skills/code-quality/SKILL.md"
-    }
-  ],
-  "mcpServers": {
-    "jcodemunch": {
-      "command": "uvx",
-      "args": ["jcodemunch-mcp"]
-    }
-  }
+  "keywords": ["audit", "security", "refine", "index", "jcodemunch", "code-quality"]
 }
