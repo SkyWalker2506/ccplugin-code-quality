@@ -85,7 +85,32 @@ Present findings with diff previews and ask for approval.
 
 ### Step 3 — Apply
 
-Apply approved changes via Edit. Back up files with >50 lines changed. Validate JSON after edits.
+1. **Backup** — For any JSON file with >50 lines to be edited, first copy it:
+   ```bash
+   cp <file> <file>.bak
+   ```
+
+2. **Apply** — Apply approved changes via Edit tool.
+
+3. **Validate JSON** — After editing any `.json` file, validate immediately:
+   ```bash
+   python3 -m json.tool <file> > /dev/null && echo "valid" || echo "INVALID — restore from .bak"
+   ```
+   Alternative if python3 not available:
+   ```bash
+   jq . <file> > /dev/null && echo "valid" || echo "INVALID — restore from .bak"
+   ```
+
+4. **Rollback** — If validation fails:
+   ```bash
+   cp <file>.bak <file>
+   ```
+   Then report the failure and do not attempt further edits to that file.
+
+5. **Cleanup** — Remove `.bak` files after successful validation:
+   ```bash
+   rm -f <file>.bak
+   ```
 
 ## Constraints
 
