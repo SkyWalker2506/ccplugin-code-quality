@@ -1,13 +1,15 @@
 ---
 name: code-quality
-description: "Auto-trigger skill for code quality auditing, config refinement, and jCodeMunch indexing."
+description: "Auto-trigger skill for code quality auditing, config refinement, memory cleanup, and jCodeMunch indexing."
 triggers:
   - "audit"
   - "code audit"
   - "security audit"
   - "cost audit"
   - "performance audit"
-  - "cleanup"
+  - "code cleanup"
+  - "clean up code"
+  - "cleanup dead code"
   - "dead code"
   - "refine"
   - "refine config"
@@ -16,24 +18,32 @@ triggers:
   - "jcodemunch"
   - "index project"
   - "code quality"
-  - "code review"
   - "scan for issues"
   - "find vulnerabilities"
   - "unused imports"
   - "unused dependencies"
+  - "memory prune"
+  - "prune memory"
+  - "clean memory files"
+  - "stale memory"
+  - "prune memory files"
+  - "claude memory cleanup"
+  - "memory cleanup"
 ---
 
 # Code Quality Skill
 
-This skill activates when the user mentions code auditing, config refinement, or project indexing. It routes to the appropriate command.
+This skill activates when the user mentions code auditing, config refinement, memory cleanup, or project indexing. It routes to the appropriate command.
 
 ## Routing
 
 | User Intent | Command |
 |-------------|---------|
-| Audit code, scan for issues, security check, find vulnerabilities, dead code, cleanup | `/audit` |
+| Audit code, scan for issues, security check, find vulnerabilities, dead code, code cleanup | `/audit` |
 | Refine CLAUDE.md, clean up config, tighten settings, fix duplication | `/refine` |
 | Index project, jCodeMunch, symbol search setup | `/index` |
+| Memory prune, clean memory files, stale memory, memory cleanup | `/memory-prune` |
+| Full code quality workflow, combined check | `/code-quality` |
 
 ## Behavior
 
@@ -51,9 +61,12 @@ This skill activates when the user mentions code auditing, config refinement, or
 | "Clean up all config files" | `/refine all` |
 | "Index this project" | `/index` |
 | "Set up jCodeMunch" | `/index` |
-| "Do a full code quality check" | `/audit all` |
+| "Do a full code quality check" | `/code-quality` |
+| "Clean up stale memory files" | `/memory-prune` |
+| "Prune memory" | `/memory-prune` |
+| "Remove old Claude memory entries" | `/memory-prune --auto` |
 
 ## Dependencies
 
 - **jCodeMunch MCP** — required for `/index`, useful for `/audit` (symbol-aware scanning)
-- Commands are defined in `commands/audit.md`, `commands/refine.md`, `commands/index.md`
+- Commands are defined in `commands/audit.md`, `commands/refine.md`, `commands/index.md`, `commands/memory-prune.md`, `commands/code-quality.md`
