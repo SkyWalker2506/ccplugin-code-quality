@@ -1,0 +1,14 @@
+# Forge / CI state
+.jira-state/
+forge.lock
+*.lock
+
+# jCodeMunch local index marker
+.claude/jcodemunch_indexed
+
+# Backup files from /refine
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
