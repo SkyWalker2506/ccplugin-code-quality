@@ -1,12 +1,34 @@
 {
   "name": "code-quality",
-  "version": "1.0.0",
-  "description": "Claude Code plugin for code auditing (security, cost, performance, cleanup), config refinement, and jCodeMunch project indexing.",
+  "version": "1.1.0",
+  "description": "Claude Code plugin for code auditing (security, cost, performance, cleanup), config refinement, memory cleanup, and jCodeMunch project indexing.",
   "author": {
     "name": "Musab Kara",
     "url": "https://github.com/SkyWalker2506"
   },
   "license": "MIT",
   "category": "development",
-  "keywords": ["audit", "security", "refine", "index", "jcodemunch", "code-quality"]
+  "keywords": ["audit", "security", "refine", "index", "jcodemunch", "code-quality", "memory-prune"],
+  "commands": [
+    {
+      "name": "audit",
+      "description": "Code audit — security, cost, performance, cleanup. Detects language stack automatically.",
+      "argument-hint": "[security|cost|performance|cleanup|all]"
+    },
+    {
+      "name": "refine",
+      "description": "Refine CLAUDE.md, settings.json, hooks — remove duplication, resolve conflicts.",
+      "argument-hint": "[global|project|all] [opus|sonnet|haiku]"
+    },
+    {
+      "name": "index",
+      "description": "Index the current project with jCodeMunch for symbol-aware navigation.",
+      "argument-hint": "[force]"
+    },
+    {
+      "name": "memory-prune",
+      "description": "Scan ~/.claude/projects/ memory files and clean stale/duplicate entries.",
+      "argument-hint": "[--dry-run|--auto]"
+    }
+  ]
 }
