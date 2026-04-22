@@ -58,6 +58,15 @@ Scan Claude memory files under `~/.claude/projects/` and clean up stale, duplica
 - Empty/trivial content (<3 meaningful lines)
 - Superseded decisions (newer feedback explicitly reverses it)
 
+### `/code-quality` — Combined Workflow
+Run the full quality pipeline in one command: index with jCodeMunch, audit all categories, and optionally refine config.
+
+```
+/code-quality              # Index + full audit
+/code-quality --refine     # Index + audit + refine project config
+/code-quality --no-index   # Audit only (skip indexing)
+```
+
 ## MCP Dependencies
 
 - **jcodemunch** — Required for `/index`, enhances `/audit` with symbol-aware scanning. Installed via `uvx jcodemunch-mcp`.

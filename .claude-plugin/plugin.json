@@ -1,7 +1,7 @@
 {
   "name": "code-quality",
-  "version": "1.1.0",
-  "description": "Claude Code plugin for code auditing (security, cost, performance, cleanup), config refinement, memory cleanup, and jCodeMunch project indexing.",
+  "version": "1.2.0",
+  "description": "Claude Code plugin for code auditing (security, cost, performance, cleanup), config refinement, memory cleanup, jCodeMunch indexing, and combined quality workflows.",
   "author": {
     "name": "Musab Kara",
     "url": "https://github.com/SkyWalker2506"
@@ -29,6 +29,11 @@
       "name": "memory-prune",
       "description": "Scan ~/.claude/projects/ memory files and clean stale/duplicate entries.",
       "argument-hint": "[--dry-run|--auto]"
+    },
+    {
+      "name": "code-quality",
+      "description": "Combined workflow — index + audit + optional refine. Single unified report.",
+      "argument-hint": "[--no-index|--refine|--no-refine]"
     }
   ]
 }
